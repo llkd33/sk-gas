@@ -1240,7 +1240,7 @@ h1.t.cover-t{font-size:84px;letter-spacing:-.03em;margin-bottom:18px}
 <section class="slide today-outputs-tools" data-sec="S0">
 <h1 class="t">오늘 가져갈 <span class="or">결과물과 사용할 도구</span></h1>
 <div class="two grow"><div class="card"><div class="ct">오늘 가져갈 결과물</div>
-<ul class="dot"><li>직접 만든 게임 · OX 퀴즈 · 사진 기록 웹앱</li><li>CSV 분석 서비스와<br>메모·할 일을 더한 Work OS</li><li>내 아이디어의 기획 문서와 프로젝트 파일</li></ul></div>
+<ul class="dot"><li>직접 만든 게임 · OX 퀴즈 · 사진 기록 웹앱</li><li>CSV 분석 서비스와<br>회의록·직원별 할 일을 정리하는 Work OS</li><li>내 아이디어의 기획 문서와 프로젝트 파일</li></ul></div>
 <div class="card soft"><div class="ct">오늘 사용할 도구</div><div class="tool-role"><b>Gemini</b><span>게임을 만들고 실행해 보기</span></div><div class="tool-role"><b>VS Code</b><span>프로젝트 파일을 보고 작업하기</span></div><div class="tool-role"><b>Claude Code</b><span>인터뷰 · 기획 · 구현 · 수정</span></div></div></div>
 <div class="secl">시작</div><div class="pg">3 / 96</div></section>
 <section class="slide" data-sec="S0">
@@ -1263,7 +1263,7 @@ h1.t.cover-t{font-size:84px;letter-spacing:-.03em;margin-bottom:18px}
     <div class="pout card" data-k="4" style="flex-direction:column"><div class="ct">LV4 · 같은 퀴즈에 기능 하나 <span class="lv" data-lv="2"></span></div><div class="cd">같은 퀴즈의 구현 문서를 고치고 기능 하나를 개선·검증합니다.  · VS Code + Claude Code</div></div>
     <div class="pout card" data-k="5" style="flex-direction:column"><div class="ct">LV5 · 내 사진 기록 <span class="lv" data-lv="3"></span></div><div class="cd">grill-me(기획 질문 도우미)로 빠진 조건을 찾습니다. 사진·메모를 저장하고 나중에 다시 봅니다. 이어서 같은 레벨에서 사진 분석·날씨·스마트폰에서 열기를 이어 합니다.</div></div>
     <div class="pout card" data-k="6" style="flex-direction:column"><div class="ct">LV6 · CSV 분석 서비스 <span class="lv" data-lv="3"></span></div><div class="cd">가상 CSV를 직접 만들고 Claude가 분석해주는 서비스를 기획·제작합니다. 분석 질문과 결과 화면은 인터뷰로 정합니다.</div></div>
-    <div class="pout card or" data-k="7" style="flex-direction:column"><div class="ct">LV7 · Work OS 확장·검증 <span class="lv" data-lv="4"></span></div><div class="cd" style="color:var(--ink2)">LV6의 CSV 분석 서비스에 메모·할 일 관리 기능을 더해 Work OS로 확장합니다. QA로 확인하고 압축해 전달합니다.</div></div>
+    <div class="pout card or" data-k="7" style="flex-direction:column"><div class="ct">LV7 · Work OS 확장·검증 <span class="lv" data-lv="4"></span></div><div class="cd" style="color:var(--ink2)">LV6의 CSV 분석 서비스에서 회의 메모를 회의록·직원별 할 일로 정리하는 Work OS를 함께 기획합니다. QA로 확인하고 압축해 전달합니다.</div></div>
   </div>
 
 <div class="secl">시작</div><div class="pg">4 / 96</div></section>
@@ -2086,23 +2086,22 @@ IA를 내가 승인하면 파일 형식·비교 기준·저장·분석 실패 �
   <div class="lvno"><b>LEVEL</b><span>7</span></div>
   <h1 class="t" style="margin-top:10px">CSV 분석 서비스의 Work OS 확장</h1>
   <div class="quest">
-    <div class="goal">이번 레벨에서 만드는 것<b>CSV 분석 + 메모·할 일 → 워드·마크다운을 놓으면 보고서 → QA·전달</b></div>
+    <div class="goal">이번 레벨에서 만드는 것<b>CSV 분석 + 회의록·직원별 할 일 → 워드·마크다운을 놓으면 보고서 → QA·전달</b></div>
     <div>도구<b>Claude Code + Plan + 점검 프롬프트</b></div><div>난이도<b><span class="lv" data-lv="4"></span></b></div>
   </div>
   <div class="stepbar lesson-rhythm"><span class="on">목표·인터뷰</span><span>내가 승인</span><span>구현</span><span>직접 확인·수정</span></div>
 
 <div class="secl">LV7 · Work OS 확장·검증</div><div class="pg">83 / 96</div></section>
-<section class="slide problem-interview" data-sec="L7"><h1 class="t">같은 CSV 서비스에 <span class="or">메모·할 일 더하기</span></h1>
-<div class="prac"><span class="pill">실습 7-1 · 확장 인터뷰</span></div><div class="pcard"><div class="ph"><span>Plan · LV6 앱을 이어서</span><button class="cp">복사</button></div><pre class="prompt ">내 CSV 분석 서비스에 메모와 할 일 관리 기능을 더해
-나만의 Work OS로 확장하고 싶어.
-/grill-me로 한 번에 질문 하나씩 나를 인터뷰해서 필요한 기능을 정리해줘.
-각 기능이 어떤 불편을 해결하는지와 우선순위를 함께 정하자.
-먼저 기능 목록과 이번에 만들 범위를 내가 확인하게 보여줘.</pre></div><p class="small">이번에는 기능과 범위부터 정합니다. 다음 페이지에서 화면과 동작 조건을 구체화합니다.</p>
+<section class="slide problem-interview" data-sec="L7"><h1 class="t">같은 CSV 서비스의 <span class="or">회의 정리·Work OS 확장</span></h1>
+<div class="prac"><span class="pill">실습 7-1 · 확장 인터뷰</span></div><div class="pcard"><div class="ph"><span>Plan · LV6 앱을 이어서</span><button class="cp">복사</button></div><pre class="prompt">내 CSV 분석 서비스를 나만의 Work OS로 확장하고 싶어.
+회의 메모를 넣으면 회의록을 정리하고 직원별 할 일을 구분해주면 좋겠어.
+/grill-me로 한 번에 질문 하나씩, 어떤 기능이 필요할지 함께 기획하자.
+먼저 이번에 만들 범위를 정하고, 내가 확인하면 다음 기획으로 이어가자.</pre></div><p class="small">이번에는 기능과 범위부터 정합니다. 다음 페이지에서 화면과 동작 조건을 구체화합니다.</p>
 <div class="secl">LV7 · Work OS 확장·검증</div><div class="pg">84 / 96</div></section>
-<section class="slide work-os-tasks-easy" data-sec="L7"><h1 class="t">분석 결과의 <span class="or">할 일 분해</span></h1>
-<p class="callout">분석으로 끝내지 않고, 내가 실행할 수 있는 작업으로 나눕니다.</p>
-<div class="two"><div class="card"><div class="ct">입력 · 수업용 예시</div><p><b>CSV:</b> A 100톤 · B 150톤<br><b>메모:</b> 금요일 회의 전<br>판매 흐름을 확인하고 싶다</p></div><div class="card soft"><div class="ct">AI가 제안할 작은 작업</div><ol class="dot"><li>지역별 판매량과 총합 확인</li><li>차이가 큰 항목과 근거 정리</li><li>회의에서 확인할 질문 준비</li></ol></div></div>
-<div class="card task-review"><div class="ct">내가 확인하고 수정할 것</div><p>할 일 · 우선순위 · 담당 · 기한 · 완료 상태<br>정해지지 않은 담당과 기한은 AI가 묻거나 ‘미정’으로 표시</p></div>
+<section class="slide work-os-tasks-easy" data-sec="L7"><h1 class="t">회의 메모에서 <span class="or">회의록·직원별 할 일로</span></h1>
+<p class="callout">회의 내용을 정리하고, 누가 무엇을 해야 하는지 구분합니다.</p>
+<div class="two"><div class="card"><div class="ct">입력 · 가상 회의 메모</div><p>담당 A가 지역별 판매 흐름을 확인하기로 했다.<br>담당 B는 다음 회의 자료를 준비하기로 했다.</p></div><div class="card soft"><div class="ct">가능한 정리 결과</div><ol class="dot"><li>회의록: 논의 내용과 결정 사항</li><li>담당 A: 지역별 판매 흐름 확인</li><li>담당 B: 다음 회의 자료 준비</li></ol></div></div>
+<div class="card task-review"><div class="ct">내가 확인하고 수정할 것</div><p>회의 내용과 직원별 할 일이 메모와 맞는지 확인합니다.<br>담당이나 기한이 없으면 AI가 묻거나 ‘미정’으로 표시합니다.</p></div>
 <div class="secl">LV7 · Work OS 확장·검증</div><div class="pg">85 / 96</div></section>
 <section class="slide work-os-flow work-os-design" data-sec="L7">
 <h1 class="t">정한 기능의 <span class="or">UI/UX와 IA</span></h1>
@@ -2111,7 +2110,7 @@ IA를 내가 승인하면 파일 형식·비교 기준·저장·분석 실패 �
 기존 CSV 분석 화면과 새 기능을 어떻게 연결할지 한 번에 질문 하나씩 인터뷰해줘.
 IA를 내가 검토·승인하면 저장할 내용·진행 상태·다시 보는 방법을 더 물어 PRD를 구체화하자.
 내가 PRD를 수정·승인하면 개발 계획을 세우자.</pre></div><p class="small">기능은 다시 처음부터 정하지 않습니다. 화면과 흐름을 확인한 뒤 동작·저장 조건으로 이어갑니다.</p></div>
-<div class="tv" data-v="example"><p class="callout">가능한 흐름의 예시입니다. 내 기능과 다르면 바꿉니다.</p><div class="g4"><div class="card"><div class="ct">① CSV 입력</div><p>분석할 데이터<br>입력 자료 확인</p></div><div class="card"><div class="ct">② 메모 더하기</div><p>회의·업무 맥락<br>내 목적과 기준</p></div><div class="card"><div class="ct">③ Claude 업무 정리</div><p>분석과 메모 연결<br>할 일·우선순위 제안</p></div><div class="card soft"><div class="ct">④ 할 일 관리</div><p>제안 확인·수정<br>저장·진행·완료</p></div></div><p class="small">한 가지 가능한 구성입니다. 필요한 화면과 기능은 인터뷰로 정합니다.</p></div></div>
+<div class="tv" data-v="example"><p class="callout">가능한 흐름의 예시입니다. 내 기능과 다르면 바꿉니다.</p><div class="g4"><div class="card"><div class="ct">① 회의 메모</div><p>회의에서 나온 내용<br>입력 자료 확인</p></div><div class="card"><div class="ct">② 회의록 초안</div><p>논의 내용 정리<br>결정 사항 확인</p></div><div class="card"><div class="ct">③ 직원별 할 일</div><p>누가 무엇을 할지<br>담당별로 구분</p></div><div class="card soft"><div class="ct">④ 확인·저장</div><p>초안 확인·수정<br>나중에 다시 보기</p></div></div><p class="small">한 가지 가능한 구성입니다. 필요한 화면과 기능은 인터뷰로 정합니다.</p></div></div>
 <div class="secl">LV7 · Work OS 확장·검증</div><div class="pg">86 / 96</div></section>
 <section class="slide webapp-build" data-sec="L7"><h1 class="t">Work OS의 <span class="or">단계별 구현과 로컬 확인</span></h1>
 <div class="prac"><span class="pill">실습 7-2</span></div><p class="callout">확인한 기획과 개발 계획대로 구현합니다.</p><div class="pcard"><div class="ph"><span>단계별 구현·로컬 확인</span><button class="cp">복사</button></div><pre class="prompt">승인한 기획대로 기존 CSV 분석 서비스를 확장하자.
@@ -2140,7 +2139,7 @@ IA를 내가 검토·승인하면 저장할 내용·진행 상태·다시 보는
 <div class="secl">LV7 · Work OS 확장·검증</div><div class="pg">89 / 96</div></section>
 <section class="slide qa-easy" data-sec="L7"><h1 class="t">웹앱의 <span class="or">QA 리스트와 수정</span></h1>
 <div class="prac"><span class="pill">실습 7-5</span></div><p class="small">QA는 만든 웹앱이 기대한 대로 작동하는지 확인하는 일입니다.</p><div class="tog grow"><div class="tbtn"><button class="on" data-v="qa">① QA 리스트</button><button data-v="fix">② 수정 인터뷰</button></div><div class="tv on" data-v="qa"><div class="pcard"><div class="ph"><span>실습 프롬프트</span><button class="cp">복사</button></div><pre class="prompt">승인한 IA·PRD를 옆에 두고 이 웹앱을 확인할 QA 리스트를 만들어줘.
-입력 → 분석 → 메모 → 할 일 저장 →
+CSV 분석 → 회의 메모 → 회의록·직원별 할 일 확인·저장 →
 md·docx 끌어다 놓기 → 보고서 초안 → 수정 저장 → 새로고침 흐름에서
 무엇을 누르면 어떤 결과가 나와야 하는지 짧게 알려줘.</pre></div></div><div class="tv" data-v="fix"><div class="pcard"><div class="ph"><span>실습 프롬프트</span><button class="cp">복사</button></div><pre class="prompt">지금은 [현재 모습]인데 [원하는 모습]으로 바꾸고 싶어.
 더 필요한 정보가 있으면 내게 물어보고 수정 계획부터 세우자.
