@@ -2,9 +2,9 @@
 
 공유 URL: https://llkd33.github.io/sk-gas/
 
-- `index.html`: PDF 교안·필수 실습자료 다운로드 입구
-- `slides.html`: 교안99장 · 본편68장 + 선택31장(강사 노트는 공개판에서 제외)
-- 수강생 교안은 PDF만 제공하며 모든 탭·선택 내용을 페이지로 펼칩니다. 프롬프트는 PDF에서 복사합니다.
+- `index.html`: 웹 교안·기존 PDF·필수 실습자료 입구
+- `slides.html`: 교안99장 · 본편99장 + 선택0장(강사 노트는 공개판에서 제외)
+- 최신 99장 교안은 웹에서 열고 탭·복사 버튼을 사용합니다. 기존 PDF는 재생성하지 않고 복습용 다운로드로 유지합니다.
 - `reference.html`, `skills.html`: IA·PRD 개념과 전체 스킬 복사
 - `downloads/sk-gas-student.zip`: 필수 실습자료5파일(grill-me·가상 CSV·열 설명·사용 안내·라이선스)
 
