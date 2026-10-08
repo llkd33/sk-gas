@@ -1,11 +1,6 @@
-# 제공 교육용 SKILL3종의 출처와 라이선스
+# grill-me 출처와 라이선스
 
-스킬 복사 자료는 현재 프로젝트의 교육용 한국어판 전체 내용을 변경 없이 제공합니다.
-
-
-## mattpocock-skills
-
-https://github.com/mattpocock/skills
+원문: https://github.com/mattpocock/skills/tree/main/grill-me
 
 MIT License
 
@@ -30,9 +25,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-## obra-superpowers
+# 공개 호환 자료의 추가 기획 스킬
 
-https://github.com/obra/superpowers
+brainstorming · writing-plans: https://github.com/obra/superpowers
 
 MIT License
 
