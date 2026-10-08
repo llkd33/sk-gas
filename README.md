@@ -3,7 +3,7 @@
 공유 URL: https://llkd33.github.io/sk-gas/
 
 - `index.html`: 교안·핸드북·참고자료·다운로드 입구
-- `slides.html`: 교안101장(강사 노트는 공개판에서 제외)
+- `slides.html`: 교안106장(강사 노트는 공개판에서 제외)
 - `handbook.html`: 실습 순서별 복사 프롬프트
 - `reference.html`, `skills.html`: IA·PRD 개념과 전체 스킬 복사
 - `downloads/sk-gas-student.zip`: 학생 자료4파일
