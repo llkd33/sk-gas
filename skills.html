@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="source-hash" content="efe5aac169208e552ab797ae74a0f23e5134e8a3d4b94da433b80be8a6e4c34a"><title>스킬3종 복사 자료</title><style>
+:root{--ink:#1b2430;--muted:#6b7b8c;--accent:#c0392b;--line:#e4e9ee;--bg:#f6f7f9;--box:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Malgun Gothic','맑은 고딕',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.75;padding:40px 20px 80px}
+.wrap{max-width:820px;margin:0 auto;background:var(--box);border:1px solid var(--line);border-radius:14px;padding:44px 52px 56px;box-shadow:0 2px 14px rgba(0,0,0,.05)}
+h1{font-size:28px;font-weight:800;letter-spacing:-.8px;line-height:1.3;padding-bottom:16px;border-bottom:3px solid var(--accent);margin:0 0 8px}
+h2{font-size:20px;font-weight:800;letter-spacing:-.4px;margin:34px 0 10px;color:#22303f;padding-left:12px;border-left:5px solid var(--accent);scroll-margin-top:20px}
+h3{font-size:16px;font-weight:800;margin:26px 0 8px;color:#3a4a5a}p{margin:10px 0;font-size:15px}ul,ol{margin:10px 0;padding-left:24px}li{margin:5px 0;font-size:15px}hr{border:0;border-top:1px solid var(--line);margin:30px 0}b,strong{font-weight:800;color:#0f1620}
+a{color:#a93025;text-underline-offset:3px;overflow-wrap:anywhere}code{background:#eef1f4;padding:2px 6px;border-radius:5px;font-size:13.5px;font-family:Consolas,monospace;color:#1d3b57;overflow-wrap:anywhere}
+blockquote{margin:16px 0;padding:14px 18px;background:#fdf7e8;border-left:4px solid #e0a800;border-radius:0 8px 8px 0;font-size:14.5px;color:#5a4a1a}blockquote p{margin:4px 0}
+.table-wrap{width:100%;overflow-x:auto;margin:16px 0}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}th{background:#f1f4f7;font-weight:800;font-size:13px;color:#3a4a5a}tr:nth-child(even) td{background:#fbfcfd}
+.meta{font-size:14px;color:var(--muted);margin:4px 0 2px}.pb{position:relative;margin:16px 0 22px;border:1px solid #d8dde2;border-radius:10px;background:#f8f9fa;overflow:hidden}.pb .bar{display:flex;gap:10px;justify-content:space-between;align-items:center;background:#37474f;color:#fff;padding:8px 12px 8px 16px;font-size:12px;font-weight:800}.pb button{flex-shrink:0;background:#fff;color:#37474f;border:0;border-radius:6px;padding:7px 14px;font-size:12px;font-weight:800;cursor:pointer;font-family:inherit}.pb button:hover{background:#ffe9e6;color:var(--accent)}.pb button.done{background:#2f8f5b;color:#fff}.pb pre{margin:0;padding:16px 18px;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;font-size:14px;line-height:1.75;font-family:'Malgun Gothic','맑은 고딕',sans-serif}
+button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #2167ad;outline-offset:3px}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.toolbar a,.toolbar button{padding:7px 12px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#3a4a5a;font-size:13px;text-decoration:none}.toc{padding:16px 18px;margin:24px 0;background:#f8f9fa;border:1px solid var(--line);border-radius:10px}.toc .links{display:flex;flex-wrap:wrap;gap:8px 16px}.toc a{font-size:14px}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.flow .step{padding:14px 12px;border:1px solid var(--line);border-radius:9px;background:#fbfcfd;font-size:14px}.flow .step b{display:block;color:var(--accent)}.flow .step span{display:block;font-size:12px;color:var(--muted)}.chapter-meta{padding:12px 16px;border:1px solid var(--line);border-radius:8px;background:#fbfcfd}.chapter-meta p{font-size:14px;margin:4px 0}.role{padding:8px 12px;background:#fff7ec;border-left:3px solid #e0a800;font-size:13px}.checks{padding:16px 18px;background:#fbfcfd;border:1px solid var(--line);border-radius:10px}.checks label{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:15px}.checks input{width:18px;height:18px;margin-top:5px;flex-shrink:0;accent-color:var(--accent)}figure{margin:20px 0;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fbfcfd}figure img{display:block;width:100%;height:auto;border-radius:6px}figcaption{font-size:12px;color:var(--muted);margin-top:8px}details{margin:16px 0;border:1px solid var(--line);border-radius:9px;padding:12px 16px}summary{font-weight:800;cursor:pointer}.foot{max-width:820px;margin:18px auto 0;font-size:12px;color:var(--muted);text-align:right}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.diagram{overflow-x:auto;container-type:inline-size;padding:16px 10px;background:#fff;break-inside:avoid}.diagram figcaption{margin:0 4px 12px;font-weight:700;color:#46566b}.diagram-svg{display:block;width:100%;height:auto;max-height:370px;font-family:inherit}.diagram-svg.vertical{display:none}
+@container(max-width:650px){.diagram-svg.horizontal{display:none}.diagram-svg.vertical{display:block;max-height:none}}
+@media(max-width:600px){.diagram-svg.horizontal{display:none}.diagram-svg.vertical{display:block;max-height:none}.diagram{padding:12px 2px}body{padding:16px 10px 36px}.wrap{padding:24px 18px 32px;border-radius:10px}h1{font-size:25px}h2{font-size:19px}.flow{grid-template-columns:1fr}.table-wrap table{min-width:510px}.pb pre{padding:14px;font-size:14px}.bar span{line-height:1.5}.toc .links{gap:10px 14px}}
+@media print{.diagram-svg.horizontal{display:block;max-height:270px}.diagram-svg.vertical{display:none}body{background:#fff;padding:0}.wrap{max-width:none;border:0;box-shadow:none;padding:0}.toolbar,.toc,.pb button,.no-print{display:none!important}.pb{break-inside:avoid;background:#f8f9fa}.bar{color:#000!important;background:#eef1f4!important}h2,h3{break-after:avoid}figure{break-inside:avoid}.table-wrap{overflow:visible}table{min-width:0!important}a{color:inherit}details{border:0;padding:0}.foot{text-align:left}.flow{grid-template-columns:repeat(3,1fr)}}
+.output-example{padding:12px 18px;border:1px solid #d8dde2;border-radius:8px;background:#eef1f4;margin:14px 0}.output-example pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;margin:6px 0}#windows-install .install-capture img{max-height:720px;object-fit:contain}.pb pre.skill-install-source{max-height:420px;overflow:auto}@media print{.pb pre.skill-install-source{max-height:none;overflow:visible}}.reference-code-document{overflow-x:auto}.reference-code-document table{min-width:600px}.reference-code-document p{font-size:14px}.code-diagram{overflow-x:auto;break-inside:avoid}.code-diagram svg{display:block;width:100%;height:auto;min-width:480px}.code-diagram figcaption{margin-bottom:10px}@media print{.code-diagram svg{min-width:0!important}.code-diagram{overflow:visible}}</style></head><body><main class="wrap"><h1>스킬3종 복사 자료</h1><p class="meta">SK가스 1Day 바이브코딩 · 09:00–18:00</p><div class="toolbar"><a href="handbook.html">실습 핸드북</a><button type="button" data-print>인쇄·PDF 저장</button></div><nav class="toc" aria-label="문서 목차"><b>바로 찾기</b><div class="links"><a href="#skill-grill-me">grill-me</a><a href="#skill-brainstorming">brainstorming</a><a href="#skill-writing-plans">writing-plans</a></div></nav><p>현재 제공된 교육용 SKILL.md 3종의 전체 내용을 그대로 복사합니다. 사용할 스킬만 저장 요청과 함께 Claude Code에 붙여넣고 실제 파일 경로·내용을 확인합니다.</p><p>Explorer에서 직접 만든 작업 폴더를 열고 진행합니다. 설치가 끝나면 새 대화에서 이름을 호출하거나 해당 파일을 가리켜 사용합니다. 원본 출처와 라이선스는 LICENSES.md를 봅니다.</p><section id="skill-grill-me"><h2>grill-me</h2><p><b>저장 경로:</b> <code>.claude/skills/grill-me/SKILL.md</code></p><details><summary>전체 SKILL.md와 저장 요청</summary><div class="pb"><div class="bar"><span>Claude Code · grill-me 전체 복사</span><button type="button" aria-label="grill-me 전체 복사">복사</button></div><pre class="skill-install-source" data-skill="grill-me">아래 내용을 .claude/skills/grill-me/SKILL.md에 그대로 저장해줘. 파일 내용을 줄이거나 바꾸지 마.
+
+---
+name: grill-me
+description: 기획이나 설계를 코드로 만들기 전에 사용자를 집요하게 인터뷰해 빈틈을 찾는다. 사용자가 /grill-me 를 입력하거나 &quot;기획을 캐물어줘&quot;, &quot;털어줘&quot;라고 할 때 쓴다.
+disable-model-invocation: true
+---
+
+# grill-me — 만들기 전에 기획 털기
+
+&gt; 교육용 한국어판. 원본: Matt Pocock `mattpocock/skills`의 `grill-me` + `grilling` (MIT License, 원문은 `_원본/mattpocock-skills/`).
+&gt; 바꾼 점:
+&gt; - 원본은 `grilling` 스킬을 다시 부르는데, 이 파일 하나로 동작하도록 합쳤다.
+&gt; - 비개발자 수업용으로 라운드당 질문 수를 줄였다.
+&gt; - 하위 에이전트로 사실을 조사하는 부분을 &quot;직접 파일 읽기&quot;로 바꿨다.
+
+사용자와 **같은 그림을 그릴 때까지** 인터뷰한다. 코드는 만들지 않는다.
+
+## 진행 방식
+
+1. 사용자가 준 기획(예: `@기획.md`)과 폴더 안 파일을 먼저 읽는다.
+2. 기획을 **결정 나무**로 본다. 결정 하나에는 그 결정에 달린 다음 결정들이 가지처럼 붙어 있다.
+3. **라운드** 단위로 묻는다.
+   - 지금 바로 물을 수 있는 질문만 묻는다. 앞선 답이 정해져야 물을 수 있는 질문은 다음 라운드로 미룬다.
+   - 한 라운드에 질문은 **최대 3개**다(사용자가 다르게 정하면 따른다).
+   - 질문마다 번호를 붙이고 **추천 답**을 함께 준다.
+   - 답을 받기 전에는 다음 라운드로 넘어가지 않는다.
+4. 파일에서 확인할 수 있는 **사실**은 사용자에게 묻지 말고 직접 찾는다. 사용자에게는 **결정**만 묻는다.
+5. 답이 쌓이면 나무를 다시 그리고 다음 라운드를 묻는다.
+6. 빈 가지가 없거나, 사용자가 정한 질문 수에 도달하면 끝낸다.
+   - 마지막에는 정해진 것, 아직 열린 것, 일부러 뺀 것을 요약한다.
+   - 사용자가 요청하면 기획 파일을 고친다.
+   - **사용자가 &quot;이해가 맞다&quot;고 확인하기 전에는 아무것도 만들지 않는다.**
+
+## 라운드 형식
+
+```
+❓ **Q1** - **&lt;질문 제목&gt;**: &lt;질문 내용. 보기가 있으면 보기도&gt;
+
+➡️ 추천: &lt;추천 답과 한 줄 이유&gt;
+
+---
+
+❓ **Q2** - **&lt;질문 제목&gt;**: &lt;질문 내용&gt;
+
+➡️ 추천: &lt;추천 답과 한 줄 이유&gt;
+```
+
+## 잘 캐묻는 질문의 예
+
+- **누가·어디서**: 장갑 낀 손으로도 누를 수 있어야 하나요? 화면 크기는 폰인가요?
+- **예외**: 사진 없이 저장해도 되나요? 같은 설비를 하루 두 번 점검하면 어떻게 되나요?
+- **경계**: 이번 버전에서 일부러 안 하는 것은 무엇인가요(로그인, 서버, 공유)?
+- **완료 기준**: 무엇이 되면 &quot;다 됐다&quot;고 말할 수 있나요?
+
+## 하지 않는 것
+
+- 코드 작성, 파일 생성, 설치 — 사용자가 확인하기 전에는 하지 않는다.
+- 한 번에 많은 질문을 쏟아내기.
+- 사용자가 정할 결정을 대신 정해 버리기.
+</pre></div></details></section><section id="skill-brainstorming"><h2>brainstorming</h2><p><b>저장 경로:</b> <code>.claude/skills/brainstorming/SKILL.md</code></p><details><summary>전체 SKILL.md와 저장 요청</summary><div class="pb"><div class="bar"><span>Claude Code · brainstorming 전체 복사</span><button type="button" aria-label="brainstorming 전체 복사">복사</button></div><pre class="skill-install-source" data-skill="brainstorming">아래 내용을 .claude/skills/brainstorming/SKILL.md에 그대로 저장해줘. 파일 내용을 줄이거나 바꾸지 마.
+
+---
+name: brainstorming
+description: 기능을 만들거나 여러 조각을 합치기 전에, 사용자와 대화하며 의도를 확인하고 설계를 함께 정한다. 사용자가 /brainstorming 을 입력하거나 &quot;같이 설계하자&quot;, &quot;만들기 전에 정리하자&quot;라고 할 때 쓴다.
+---
+
+# brainstorming — 만들기 전에 같이 설계하기
+
+&gt; 교육용 한국어판. 원본: Jesse Vincent `obra/superpowers`의 `brainstorming` (MIT License, 원문은 `_원본/obra-superpowers/`).
+&gt; 바꾼 점:
+&gt; - git 커밋·worktree, 테스트 먼저(TDD), 시각 도우미 브라우저, 다른 스킬 자동 호출을 뺐다.
+&gt; - 화면·로컬만 만드는 비개발자 수업에 맞춰 줄였다.
+&gt; - 핵심은 남겼다: **의도 확인 → 설계 → 승인 전에는 만들지 않기**.
+
+아이디어를 사용자가 알아보고 고칠 수 있는 **설계**로 바꾼다.
+
+## 꼭 지킬 것
+
+&lt;HARD-GATE&gt;
+사용자가 설계를 승인하기 전에는 코드 작성, 파일 생성·수정, 설치를 하지 않는다.
+폴더 안 파일을 **읽는 것**은 해도 된다.
+&lt;/HARD-GATE&gt;
+
+&quot;너무 간단해서 승인까지 필요 없다&quot;는 생각이 들어도 짧은 설계를 보여주고 승인을 받는다.
+
+## 순서
+
+1. **폴더 둘러보기**: 관련 파일(기획.md, 기존 앱 폴더)을 읽고, 지금 무엇이 있는지 짧게 정리한다.
+2. **의도 확인**: 무엇을 이루려는지, 누가 쓰는지, 무엇이 되면 성공인지 확인한다.
+   - 모르는 게 있으면 **한 번에 질문 하나**만 한다.
+   - 이미 답이 나와 있으면 다시 묻지 않는다.
+3. **내가 이해한 것 써 보기**: 목표·조건·성공 기준을 5줄 안쪽으로 쓴다.
+   - &quot;사용자가 말한 것&quot;과 &quot;내가 가정한 것&quot;을 나눠서 쓴다.
+   - 사용자의 정정을 받고 반영한다.
+4. **방법 2~3개 비교**: 장단점을 한 줄씩 쓰고 추천 하나를 고른다.
+5. **설계 보여주기**: 승인 전에 아래 항목을 쓴다.
+   - 화면 구성(탭·카드·버튼)
+   - 데이터를 어디에 어떻게 저장하나(오늘은 브라우저 저장)
+   - 기존 조각에서 그대로 쓰는 것 / 바꾸는 것 / 버리는 것
+   - 이번에 **안 하는 것**
+6. **승인 받기**: &quot;이 설계로 갈까요?&quot;라고 묻는다.
+   - 승인 범위를 넘겨짚지 않는다. 설계 승인은 &quot;계획을 써도 된다&quot;는 뜻이지 &quot;만들어도 된다&quot;는 뜻이 아니다.
+7. **설계 문서 저장**: 승인된 설계를 `docs/설계.md`에 저장한다.
+   - 다음 단계는 `/writing-plans`로 계획을 쓰는 것이라고 안내한다.
+
+## 하지 않는 것
+
+- 승인 전에 만들기 시작하기
+- 질문 여러 개를 한꺼번에 묻기
+- 사용자가 말하지 않은 기능을 슬쩍 넣기
+- 서버·데이터베이스·로그인 추가 — 오늘 수업 범위 밖이다. 사용자가 요구하면 &quot;오늘 범위 밖&quot;이라고 알린다
+</pre></div></details></section><section id="skill-writing-plans"><h2>writing-plans</h2><p><b>저장 경로:</b> <code>.claude/skills/writing-plans/SKILL.md</code></p><details><summary>전체 SKILL.md와 저장 요청</summary><div class="pb"><div class="bar"><span>Claude Code · writing-plans 전체 복사</span><button type="button" aria-label="writing-plans 전체 복사">복사</button></div><pre class="skill-install-source" data-skill="writing-plans">아래 내용을 .claude/skills/writing-plans/SKILL.md에 그대로 저장해줘. 파일 내용을 줄이거나 바꾸지 마.
+
+---
+name: writing-plans
+description: 승인된 설계를 작고 확인 가능한 단계의 실행 계획으로 쓴다. 사용자가 /writing-plans 를 입력하거나 &quot;계획 써줘&quot;, &quot;단계로 나눠줘&quot;라고 할 때, 또는 brainstorming 설계가 승인된 뒤에 쓴다.
+---
+
+# writing-plans — 작은 단계로 계획 쓰기
+
+&gt; 교육용 한국어판. 원본: Jesse Vincent `obra/superpowers`의 `writing-plans` (MIT License, 원문은 `_원본/obra-superpowers/`).
+&gt; 바꾼 점:
+&gt; - git 커밋, worktree, 테스트 코드 먼저(TDD), 하위 에이전트 실행 안내를 뺐다.
+&gt; - 대신 단계마다 사람이 **localhost에서 눌러 보고 확인할 것**을 쓰게 했다.
+
+이 프로젝트를 처음 보는 사람도 그대로 따라 할 수 있게 계획을 쓴다. 계획에는 **무엇을 정했는지**를 남긴다: 어떤 파일, 어떤 이름, 설계의 어떤 값, 어떻게 확인할지.
+
+## 시작 전
+
+- `docs/설계.md`(brainstorming 결과)나 사용자가 준 설계를 읽는다.
+- 설계가 없으면 먼저 `/brainstorming`을 권한다.
+- 설계가 너무 크면 나눠서 계획하자고 제안한다.
+
+## 계획 문서 형식
+
+`docs/계획.md`에 저장한다.
+
+```markdown
+# [기능 이름] 실행 계획
+
+**목표:** 한 문장
+**설계 문서:** docs/설계.md
+**지킬 것:** 서버·DB 없음, 브라우저 저장만, 기획.md에 없는 기능 넣지 않기
+
+## 파일 지도
+- `index.html` — 무엇을 담당
+- `app.js` — 무엇을 담당
+
+## 단계 1: [이름]
+- [ ] 할 일: 무엇을 어떤 파일에서 바꾸나 (구체적으로)
+- [ ] 확인: localhost에서 무엇을 누르면 무엇이 보여야 하나
+- [ ] 멈춤: 사용자 확인을 받고 다음 단계로
+
+## 단계 2: ...
+```
+
+## 단계 크기
+
+- 단계는 **3~5개**로 한다. 사용자가 개수를 정하면 따른다.
+- 한 단계는 **눌러서 확인할 수 있는 변화 하나**만 담는다.
+- 단계마다 &quot;확인&quot;을 반드시 쓴다. 확인할 수 없으면 너무 크거나 모호한 것이다.
+
+## 스스로 점검 (저장 전에)
+
+- 설계의 모든 항목이 어느 단계에 들어갔나?
+- &quot;알아서 적당히&quot;, &quot;필요하면&quot; 같은 빈 말이 남아 있지 않나?
+- 단계 사이의 이름(파일명·버튼 이름)이 서로 맞나?
+
+## 저장 후
+
+계획 위치를 알리고 묻는다. &quot;단계 1부터 시작할까요? 단계마다 멈춰서 확인받겠습니다.&quot;
+**사용자가 시작하라고 하기 전에는 만들지 않는다.**
+</pre></div></details></section><p id="status" class="sr" role="status" aria-live="polite"></p></main><footer class="foot">SK가스 1Day 바이브코딩 · 수강생 안내 · 2026-10-08</footer><script>
+(()=>{
+ const status=document.getElementById('status');let timer;
+ function say(t){status.textContent=t;clearTimeout(timer);timer=setTimeout(()=>status.textContent='',2500)}
+ document.querySelectorAll('.pb button').forEach(b=>b.addEventListener('click',async()=>{
+  const t=b.closest('.pb').querySelector('pre').textContent;let copied=false;
+  if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(t);copied=true}catch{}}
+  if(!copied){const ta=document.createElement('textarea');ta.value=t;ta.setAttribute('aria-hidden','true');ta.style.cssText='position:fixed;left:-9999px';document.body.appendChild(ta);ta.select();try{copied=document.execCommand('copy')}catch{}ta.remove();b.focus()}
+  if(copied){b.textContent='복사됨';b.classList.add('done');say('문장을 복사했습니다. 표시된 곳에 붙여넣으세요.');setTimeout(()=>{b.textContent='복사';b.classList.remove('done')},1400)}
+  else{const r=document.createRange();r.selectNodeContents(b.closest('.pb').querySelector('pre'));const s=getSelection();s.removeAllRanges();s.addRange(r);say('자동 복사가 안 됐습니다. 선택된 문장을 직접 복사하세요.')}
+ }));
+ const checks=[...document.querySelectorAll('[data-ready]')],key='skgas.prepare.checks.v1';
+ try{const saved=JSON.parse(localStorage.getItem(key)||'{}');checks.forEach(c=>c.checked=saved[c.id]===true)}catch{}
+ function count(){const el=document.getElementById('readyCount');if(el)el.textContent=checks.filter(c=>c.checked).length+' / '+checks.length+'개 직접 확인'}
+ checks.forEach(c=>c.addEventListener('change',()=>{try{localStorage.setItem(key,JSON.stringify(Object.fromEntries(checks.map(c=>[c.id,c.checked]))))}catch{say('이 브라우저에 체크를 저장하지 못했습니다. 별도로 기록하세요.')}count()}));count();
+ document.querySelector('[data-reset]')?.addEventListener('click',()=>{checks.forEach(c=>c.checked=false);try{localStorage.removeItem(key)}catch{}count()});
+ document.querySelector('[data-print]').addEventListener('click',()=>window.print());
+ let opened=[];addEventListener('beforeprint',()=>{opened=[...document.querySelectorAll('details:not([open])')];opened.forEach(d=>d.open=true)});addEventListener('afterprint',()=>{opened.forEach(d=>d.open=false)});
+})();
+</script></body></html>
