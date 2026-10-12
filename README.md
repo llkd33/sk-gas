@@ -2,7 +2,8 @@
 
 공유 URL: https://llkd33.github.io/sk-gas/
 
-- `index.html`: 웹 교안·기존 PDF 입구
+- `index.html`: 웹 교안·기존 PDF·개념 그래프 복습 입구
+- `review.html`: 짧은 설명·관계·검색·분야 필터·목록 보기로 복습하는 별도 그래프. 기존 슬라이드는 수정하지 않습니다. 원본은 `_workspace/review-graph.html`.
 - `slides.html`: 교안96장 · 본편96장 + 선택0장(강사 노트는 공개판에서 제외)
 - 최신 96장 교안은 웹에서 열고 탭·복사 버튼을 사용합니다. 기존 PDF는 재생성하지 않고 복습용 다운로드로 유지합니다.
 - `reference.html`, `skills.html`: IA·PRD 개념과 전체 스킬 복사

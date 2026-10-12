@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>쉽게 복습하기 · SK가스 1Day</title>
+<meta name="description" content="오늘 배운 바이브코딩 개념을 그래프로 연결하고, 짧은 설명과 교안으로 다시 확인하세요.">
+<style>
+:root{color-scheme:dark;--bg:#13151a;--panel:#1b1e25;--border:#333844;--text:#edf0f5;--muted:#a8b0c0;--accent:#ff9e59}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}button,input,a{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,[role=button]:focus-visible{outline:2px solid var(--accent);outline-offset:4px}button{color:var(--text)}
+.shell{max-width:1560px;margin:auto;padding:24px 32px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px}.back{color:var(--muted);text-decoration:none;font-size:13px}.brand{font-size:11px;letter-spacing:.12em;color:var(--muted)}h1{font-size:clamp(25px,3vw,34px);line-height:1.3;margin:20px 0 7px;letter-spacing:-.8px}.intro{color:var(--muted);margin:0 0 22px}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:13px}.search-wrap{position:relative;flex:1;min-width:220px;max-width:410px}.search-wrap input{width:100%;border:1px solid var(--border);border-radius:10px;background:var(--panel);color:var(--text);padding:11px 40px 11px 14px}.clear{position:absolute;right:8px;top:7px;background:none;border:none;color:var(--muted);padding:3px 7px}.switch{display:flex;background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:3px}.switch button{border:0;background:transparent;border-radius:6px;padding:7px 14px;font-size:13px;color:var(--muted)}.switch button[aria-pressed=true]{background:#373d49;color:white}.count{margin-left:auto;color:var(--muted);font-size:12px}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.filter{background:transparent;border:1px solid var(--border);border-radius:30px;padding:6px 12px;color:var(--muted);font-size:12px}.filter[aria-pressed=true]{background:#30343e;border-color:#7c8496;color:white}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;background:var(--color)}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:16px;align-items:start}.graph-box{height:clamp(490px,calc(100dvh - 285px),780px);min-width:0;position:relative;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:radial-gradient(ellipse at 48% 42%,#20242d 0%,#171a21 70%)}svg{display:block;width:100%;height:100%;touch-action:none;user-select:none;cursor:grab}svg.dragging{cursor:grabbing}.edge{stroke:#8e99b0;stroke-width:1.1;opacity:.24;pointer-events:none}.edge.active{stroke:var(--accent);stroke-width:2.2;opacity:.85}.edge.dim{opacity:.07}.node{cursor:pointer;transition:opacity .15s}.node.dim{opacity:.19}.node circle{fill:var(--color);stroke:var(--bg);stroke-width:3}.node .ring{fill:none;stroke:var(--color);stroke-width:2;opacity:0}.node.selected .ring,.node:focus-visible .ring{opacity:1}.node text{fill:#d2d8e5;font-size:23px;text-anchor:middle;paint-order:stroke;stroke:#171a21;stroke-width:5;stroke-linejoin:round;pointer-events:none}.node.hub text{fill:#f7f8fc;font-weight:650;font-size:25px}.node.selected text{fill:white;font-weight:750}.node:hover text{fill:white}.node.root text{font-size:28px;font-weight:750}.node.hidden,.edge.hidden{display:none}.graph-tools{position:absolute;right:14px;top:14px;display:flex;gap:4px;background:#1b1e25e8;border:1px solid var(--border);border-radius:9px;padding:4px}.graph-tools button{background:transparent;border:0;border-radius:5px;padding:5px 10px;font-size:14px}.graph-tools button:hover{background:#343b49}.hint{position:absolute;bottom:13px;left:16px;right:16px;color:#a8b0c0;font-size:11px;pointer-events:none}.empty{position:absolute;inset:90px 20px auto;text-align:center;color:var(--muted);pointer-events:none}.empty strong{color:var(--text);display:block;font-size:18px;margin-bottom:8px}.detail{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:24px;min-height:360px}.eyebrow{font-size:11px;letter-spacing:.04em;color:var(--accent)}.detail h2{font-size:25px;line-height:1.35;margin:13px 0;letter-spacing:-.5px}.definition{font-size:16px;line-height:1.8;margin:0 0 22px;word-break:keep-all}.detail h3{font-size:12px;color:var(--muted);font-weight:500;margin:20px 0 9px}.related{display:flex;flex-direction:column;gap:6px}.related button{background:#222630;border:1px solid #343a47;border-radius:8px;text-align:left;padding:9px 11px;font-size:13px;display:flex;align-items:center;justify-content:space-between;gap:10px}.related button:hover{border-color:var(--accent)}.relation{font-size:10px;color:var(--muted);text-align:right}.lesson{display:block;margin-top:24px;padding-top:17px;border-top:1px solid var(--border);color:var(--accent);font-size:13px;text-decoration:none}.start{display:flex;gap:7px;flex-wrap:wrap}.start button{border:1px solid #434a58;border-radius:7px;background:transparent;padding:6px 10px;font-size:12px}.reset{font-size:12px;color:var(--muted);background:transparent;border:0;text-decoration:underline;padding:0;margin-top:20px}.list{position:absolute;inset:0;overflow:auto;padding:22px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-content:start;gap:10px}.list button{border:1px solid #363d4a;border-radius:10px;background:#222630;padding:15px;text-align:left;min-width:0}.list button[aria-pressed=true]{border-color:var(--accent)}.list strong{display:block;font-size:15px;margin:4px 0 7px}.list small{font-size:10px;color:var(--muted)}.list p{font-size:12px;color:#bac2d0;margin:0;line-height:1.7;word-break:keep-all}.search-hits{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}.search-hits button{background:#2a303a;border:1px solid #414a59;border-radius:7px;padding:5px 10px;font-size:12px}.foot{font-size:11px;color:var(--muted);margin:18px 0 0}[hidden]{display:none!important}
+@media(max-width:1000px){.shell{padding:22px}.workspace{grid-template-columns:minmax(0,1fr) 280px}.detail{padding:20px}.list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.shell{padding:20px 16px}.intro{font-size:13px;margin-bottom:17px}.workspace{grid-template-columns:1fr}.graph-box{height:470px}.detail{min-height:0}.search-wrap{max-width:none;flex-basis:100%}.controls{gap:10px}.count{font-size:11px}.filters{gap:6px}.filter{padding:5px 10px}.hint{font-size:10px}.list{padding:15px;gap:8px}.detail h2{font-size:24px}.definition{font-size:16px}.graph-tools{right:10px;top:10px}.graph-tools button{padding:5px 8px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body><main class="shell">
+<div class="top"><a class="back" href="index.html">← 강의자료 메인</a><span class="brand">SK GAS · 1DAY</span></div>
+<h1>개념을 연결하며, 쉽게 복습하기</h1>
+<p class="intro">단어 하나를 눌러 보세요. 짧은 뜻과 이어지는 개념을 함께 볼 수 있습니다.</p>
+<div class="controls"><div class="search-wrap"><input id="search" type="search" placeholder="개념 찾기 · 예: IA, API, 저장" aria-label="개념 검색" autocomplete="off"><button class="clear" id="clearSearch" aria-label="검색 지우기" hidden>×</button></div><div class="switch" aria-label="보기 방식"><button id="graphMode" aria-pressed="true">그래프</button><button id="listMode" aria-pressed="false">목록</button></div><span id="count" class="count" role="status" aria-live="polite"></span></div>
+<nav class="filters" id="filters" aria-label="개념 분야"></nav>
+<div class="search-hits" id="searchHits" aria-label="검색 결과" hidden></div>
+<div class="workspace"><section class="graph-box" aria-label="개념 연결 그래프">
+<svg id="graph" role="group" aria-label="개념을 선택하면 설명이 나옵니다. 키보드 Tab으로 개념을 선택할 수 있습니다."><g id="scene"><g id="edges"></g><g id="nodes"></g></g></svg>
+<div class="graph-tools" id="graphTools"><button id="zoomIn" aria-label="그래프 확대">＋</button><button id="zoomOut" aria-label="그래프 축소">−</button><button id="fit" aria-label="그래프 전체 보기">전체 보기</button></div>
+<div id="list" class="list" hidden aria-label="개념 목록"></div>
+<div id="empty" class="empty" hidden><strong>찾는 개념이 없어요.</strong>다른 단어를 검색하거나 ‘전체’를 눌러 보세요.</div>
+<div class="hint" id="hint">단어 선택 · 빈 곳을 끌어 이동 · 휠 또는 ＋／−로 확대</div>
+</section><aside class="detail" id="detail" aria-label="개념 설명"></aside></div>
+<p class="foot">오늘 교안에 나온 개념을 짧게 정리했습니다. ‘교안에서 다시 보기’로 원래 설명과 실습을 확인하세요.</p>
+<noscript><p>그래프에는 JavaScript가 필요합니다. <a href="reference.html">개념 레퍼런스</a>에서 복습할 수 있습니다.</p></noscript>
+</main>
+<script>
+'use strict';
+const groups=[
+ ['ai','AI 이해','#bdadff'],['tools','사용 도구','#93baff'],['plan','기획과 대화','#ffb274'],['build','웹앱 만들기','#78cfbb'],['connect','자료와 연결','#86cfea'],['reuse','반복 작업','#e6a0c9'],['check','확인과 공유','#e3cd85']
+];
+// id, 이름, 분야, 짧은 뜻, 교안 장 번호, 검색 별칭
+const rows=[
+ ['vibe','바이브코딩','plan','원하는 결과를 말로 설명하고, AI와 함께 만들고 직접 확인하며 고치는 방식입니다.',1,'vibe coding'],
+ ['llm','LLM','ai','글의 맥락을 바탕으로 답변·코드를 만드는 AI입니다. 틀릴 수도 있습니다.',9,'AI 모델 인공지능'],
+ ['token','토큰','ai','AI가 읽고 쓰는 글의 작은 단위입니다.',10,'token 입력 출력'],
+ ['context','컨텍스트','ai','AI가 이번 작업에서 참고하는 대화·파일·도구 결과입니다. 용량에는 한계가 있습니다.',13,'context 맥락 책상'],
+ ['prompt','프롬프트','ai','AI에게 주는 요청입니다. 목표·맥락·결과·제약을 함께 알려 줍니다.',17,'prompt 지시'],
+ ['model','모델과 effort','ai','모델은 작업을 수행하는 AI, effort는 사고에 들이는 노력을 조절하는 설정입니다.',38,'Haiku Sonnet Opus 추론 노력'],
+ ['claude','Claude Code','tools','프로젝트 파일을 읽고 고치며 명령을 실행하는 AI 작업 도구입니다.',33,'클로드 코드'],
+ ['chat','Claude Chat','tools','질문하고 자료를 설명하거나 글의 초안을 만드는 대화 화면입니다.',33,'클로드 챗'],
+ ['cowork','Claude Cowork','tools','파일과 여러 단계의 업무를 AI에게 맡기는 작업 방식입니다.',33,'코워크'],
+ ['vscode','VS Code','tools','프로젝트의 파일과 코드를 보고 수정하는 편집기입니다.',35,'브이에스코드 IDE 에디터'],
+ ['gemini','Gemini','tools','Google의 AI입니다.',22,'제미나이 구글'],
+ ['canvas','Canvas','tools','Gemini 안에서 결과물을 만들고 확인하는 화면입니다. HTML 게임을 만듭니다.',22,'캔버스'],
+ ['interview','기획 인터뷰','plan','질문·답변으로 누구의 어떤 문제를 풀지, 어떤 기능이 필요한지 정하는 과정입니다.',49,'인터뷰 질문 목표'],
+ ['ia','IA','plan','앱에 필요한 화면과 화면 사이의 이동을 정리한 구조입니다.',48,'화면 지도 구조 정보구조'],
+ ['prd','PRD','plan','기능·입력·저장·오류 처리 등 앱의 동작 조건을 정리한 요구사항 문서입니다.',48,'요구사항 기획 조건'],
+ ['plan','Plan 모드','plan','수정 전에 파일을 살펴보고 계획을 확인하는 모드입니다.',37,'계획 승인 모드'],
+ ['approval','기획 승인','plan','AI의 제안을 읽고 수정한 뒤 이번에 만들 범위를 확정하는 과정입니다.',49,'승인 검토 범위'],
+ ['phase','단계별 개발','plan','큰 작업을 작은 단계로 나눠 구현하고 각 단계의 결과를 확인합니다.',68,'Phase 페이즈 계획'],
+ ['feedback','피드백','plan','기대한 결과와 실제 결과의 차이를 알려 주는 것입니다.',51,'수정 현재 원하는 모습'],
+ ['html','HTML','build','제목·글·버튼처럼 화면에 들어갈 내용과 구조를 정하는 언어입니다.',25,'구조 웹앱'],
+ ['css','CSS','build','색·크기·간격·배치 등 화면의 모양을 정하는 언어입니다.',26,'디자인 여백 스타일'],
+ ['js','JavaScript','build','버튼 클릭이나 입력에 따라 화면이 움직이고 데이터를 처리하게 하는 코드입니다.',27,'JS 자바스크립트 동작'],
+ ['component','컴포넌트','build','버튼·입력칸·카드처럼 화면을 구성하는 요소입니다.',42,'UI 요소'],
+ ['localhost','localhost','build','내 컴퓨터에서 실행한 앱의 주소입니다. 다른 사람이 접속할 공개 주소와는 다릅니다.',44,'로컬 서버 실행'],
+ ['storage','브라우저 저장','build','새로고침 뒤에도 기록을 다시 보는 저장 방식입니다. 기기 간 공유는 별도입니다.',65,'저장 localStorage IndexedDB'],
+ ['permission','브라우저 권한','build','카메라·마이크·위치 사용 허용입니다. 막히면 파일·직접 입력으로 대신합니다.',65,'카메라 음성 위치 허용'],
+ ['api','API','connect','프로그램끼리 요청과 결과를 주고받는 창구입니다. 날씨·AI 분석에 씁니다.',79,'에이피아이 연결'],
+ ['csv','CSV','connect','행과 열로 된 표 데이터 파일입니다. 분석 질문에 맞게 항목·단위·기간을 정합니다.',77,'엑셀 시트 데이터셋'],
+ ['dashboard','대시보드','connect','데이터의 요약·표·차트·필터를 한 화면에 보여 주는 것입니다.',78,'분석 차트 그래프'],
+ ['photo','사진 분석','connect','사진을 AI에게 보내 내용을 설명·정리하는 기능입니다. 원본과 비교합니다.',71,'이미지 분석'],
+ ['weather','날씨 API','connect','도시 등의 조건으로 날씨 데이터를 가져오는 연결입니다.',72,'Open-Meteo 온도'],
+ ['mcp','MCP','connect','AI가 외부 도구·데이터와 연결해 일하는 공통 규격입니다. 접근 권한을 확인합니다.',19,'커넥터 도구 연결'],
+ ['tunnel','터널링 링크','connect','로컬 서버를 인터넷 주소로 연결해 폰이나 외부에서 만든 앱을 확인하는 방법입니다.',73,'터널 스마트폰 주소'],
+ ['workos','Work OS','connect','CSV 앱에 회의 메모를 더해 회의록·직원별 할 일·보고서로 이어 가는 업무 공간입니다.',84,'워크 오에스 업무 회의록 할 일'],
+ ['report','보고서 초안','connect','분석과 메모로 만든 첫 보고서입니다. 근거와 내용을 읽고 고친 뒤 저장합니다.',89,'md docx 마크다운 워드'],
+ ['skill','스킬','reuse','반복하는 작업 방법과 기준을 저장해 다시 쓰는 안내입니다.',52,'SKILL.md 반복 재사용'],
+ ['grill','grill-me','reuse','질문으로 기능과 조건을 구체화하는 인터뷰 스킬입니다. IA·PRD로 이어 갑니다.',53,'그릴미'],
+ ['claudemd','CLAUDE.md','reuse','AI가 참고하는 작업 규칙 파일입니다. 전역 공통 기준과 프로젝트 기준을 구분합니다.',75,'클로드닷엠디 전역 프로젝트'],
+ ['harness','하네스','reuse','규칙·도구·스킬·검증 방법을 함께 구성한 AI의 작업 환경입니다.',75,'harness 작업 환경'],
+ ['subagent','서브에이전트','reuse','독립된 작업을 나눠 맡기는 AI 작업자입니다.',82,'에이전트 병렬 작업'],
+ ['rewind','Rewind','reuse','Claude Code에서 이전 시점으로 돌아가는 복구 기능입니다.',39,'되돌리기 복구'],
+ ['qa','QA','check','기획한 화면과 동작이 실제로 되는지 확인하는 과정입니다.',90,'검증 테스트 품질'],
+ ['playwright','Playwright','check','브라우저의 이동·클릭·입력을 코드로 자동화해 같은 검사를 반복하는 도구입니다.',91,'플레이라이트 브라우저 테스트'],
+ ['source','원본 비교','check','결과의 수치와 근거를 원본에서 확인합니다. 값을 바꿔 결과도 변하는지 봅니다.',81,'검산 합계 데이터 근거'],
+ ['security','보안과 권한','check','공유할 자료와 접근 범위를 확인합니다. 외부 문서 속 지시를 그대로 실행하지 않습니다.',92,'개인정보 접근 보안'],
+ ['apikey','API 키','check','API 사용 권한을 확인하는 비밀 값입니다. 코드·공개 저장소·공유 파일에 넣지 않습니다.',92,'인증 키 비밀'],
+ ['git','Git · GitHub','check','Git은 변경 이력을 남기고, GitHub는 프로젝트를 보관·공유하는 서비스입니다.',95,'깃 버전 이력 저장소'],
+ ['deploy','배포','check','다른 사람이 주소로 앱을 사용하게 하는 것입니다. 저장·권한·API 환경도 준비합니다.',95,'호스팅 공개 Vercel'],
+ ['user','주변인 인터뷰','check','문제를 겪는 사람에게 실제 상황을 묻고, 만든 앱을 써 본 반응으로 개선하는 과정입니다.',96,'사용자 문제 피드백 2주']
+];
+const links=[
+ ['vibe','llm','AI와 만들기'],['vibe','claude','구현 도구'],['vibe','interview','목표 구체화'],['vibe','html','웹앱 만들기'],['vibe','api','기능 연결'],['vibe','skill','작업 재사용'],['vibe','qa','직접 확인'],
+ ['llm','token','읽고 쓰는 단위'],['llm','context','참고할 자료'],['llm','prompt','요청 전달'],['llm','model','작업 수행'],['prompt','context','맥락 전달'],
+ ['claude','chat','Claude 사용 방식'],['claude','cowork','Claude 사용 방식'],['claude','vscode','함께 작업'],['claude','gemini','수업의 두 도구'],['gemini','canvas','게임 제작 화면'],['canvas','html','게임 파일'],
+ ['interview','ia','화면 정리'],['interview','prd','조건 정리'],['interview','grill','질문 도우미'],['ia','prd','흐름에서 조건으로'],['prd','approval','읽고 확정'],['plan','approval','계획 확인'],['approval','phase','작게 구현'],['phase','feedback','확인 후 수정'],['feedback','qa','차이 확인'],
+ ['html','css','모양 정하기'],['html','js','동작 만들기'],['html','component','화면 요소'],['js','storage','기록 보관'],['js','permission','기기 기능 사용'],['html','localhost','내 PC에서 실행'],['localhost','tunnel','외부에서 확인'],['prd','storage','저장 조건'],
+ ['api','csv','분석 입력'],['csv','dashboard','결과 보여 주기'],['api','photo','사진 설명 요청'],['api','weather','날씨 가져오기'],['api','mcp','연결 방식 이해'],['api','apikey','사용 권한'],['photo','weather','기록에 정보 더하기'],['dashboard','workos','같은 앱 확장'],['workos','report','메모에서 보고서로'],['report','source','근거 확인'],['csv','source','원본 대조'],
+ ['skill','grill','인터뷰 재사용'],['skill','claudemd','절차와 규칙'],['harness','claudemd','작업 규칙'],['harness','skill','반복 방법'],['harness','subagent','역할 나누기'],['harness','mcp','도구 연결'],['claude','rewind','이전 시점 복구'],['subagent','qa','다른 관점의 검토'],
+ ['qa','playwright','반복 검사'],['qa','source','숫자 확인'],['qa','prd','기획과 비교'],['qa','security','공유 전 확인'],['security','apikey','비밀 값 보호'],['security','deploy','공개 범위 확인'],['git','deploy','변경 후 공유'],['deploy','user','써 본 반응'],['user','interview','다음 문제 정리']
+];
+const $=id=>document.getElementById(id),ns='http://www.w3.org/2000/svg';
+const nodes=rows.map(([id,label,group,description,slide,aliases])=>({id,label,group,description,slide,aliases,labelWidth:[...label].reduce((w,c)=>w+(/[ -~]/.test(c)?13:25),0)}));
+const byId=new Map(nodes.map(n=>[n.id,n])),groupMap=new Map(groups.map(g=>[g[0],{label:g[1],color:g[2]}]));
+const hubs=['llm','claude','interview','html','api','skill','qa'];
+let category='all',query='',selected=null,mode='graph',visible=new Set(nodes.map(n=>n.id)),camera={x:0,y:0,s:1},gesture=null;
+const nodeEls=new Map(),edgeEls=[];
+function svgElement(name,attributes){const e=document.createElementNS(ns,name);for(const [k,v] of Object.entries(attributes))e.setAttribute(k,v);return e;}
+function positionNodes(){
+ const anchors=[[-430,-280],[0,-390],[430,-275],[465,135],[240,380],[-265,370],[-510,90]];
+ groups.forEach(([id],i)=>{const subset=nodes.filter(n=>n.group===id&&n.id!=='vibe');subset.forEach((n,j)=>{const a=anchors[i];n.ax=a[0];n.ay=a[1];n.hub=hubs.includes(n.id);const t=j*2.399+i*.6,r=n.hub?0:70+28*Math.sqrt(j);n.x=a[0]+Math.cos(t)*r;n.y=a[1]+Math.sin(t)*r;});});
+ Object.assign(byId.get('vibe'),{x:0,y:0,ax:0,ay:0,hub:true});
+ // Keep each label readable, rather than letting force-layout nodes overlap.
+ for(let step=0;step<320;step++){
+  for(const n of nodes){if(n.id==='vibe')continue;n.x+=(n.ax-n.x)*.012;n.y+=(n.ay-n.y)*.012;}
+  for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+   const a=nodes[i],b=nodes[j],dx=b.x-a.x,dy=b.y-a.y,needX=(a.labelWidth+b.labelWidth)/2+20,overX=needX-Math.abs(dx),overY=64-Math.abs(dy);
+   if(overX>0&&overY>0){if(overX<overY){const force=(overX+2)*.29*(dx>=0?1:-1);if(a.id!=='vibe')a.x-=force;if(b.id!=='vibe')b.x+=force;}else{const force=(overY+2)*.29*(dy>=0?1:-1);if(a.id!=='vibe')a.y-=force;if(b.id!=='vibe')b.y+=force;}}
+  }
+ }
+}
+positionNodes();
+for(const [a,b,relation] of links){const e=svgElement('line',{class:'edge',x1:byId.get(a).x,y1:byId.get(a).y,x2:byId.get(b).x,y2:byId.get(b).y});$('edges').append(e);edgeEls.push({e,a,b,relation});}
+for(const n of nodes){
+ const e=svgElement('g',{class:'node'+(n.hub?' hub':'')+(n.id==='vibe'?' root':''),transform:`translate(${n.x} ${n.y})`,role:'button',tabindex:0,'aria-label':n.label+'：'+n.description,'aria-pressed':'false','data-id':n.id});e.style.setProperty('--color',groupMap.get(n.group).color);
+ e.append(svgElement('rect',{x:-n.labelWidth/2-8,y:-19,width:n.labelWidth+16,height:64,fill:'transparent'}),svgElement('circle',{r:n.hub?11:7}),svgElement('circle',{class:'ring',r:n.hub?19:15}));const text=svgElement('text',{y:36});text.textContent=n.label;e.append(text);
+ e.addEventListener('click',()=>{if(!gesture?.moved)selectNode(n.id)});e.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectNode(n.id)}});
+ $('nodes').append(e);nodeEls.set(n.id,e);
+}
+function applyCamera(){$('scene').setAttribute('transform',`translate(${camera.x} ${camera.y}) scale(${camera.s})`);}
+function fitGraph(){
+ if(!visible.size)return;const box=$('graph').getBoundingClientRect();
+ const active=nodes.filter(n=>visible.has(n.id)),xmin=Math.min(...active.map(n=>n.x-n.labelWidth/2-15)),xmax=Math.max(...active.map(n=>n.x+n.labelWidth/2+15)),ymin=Math.min(...active.map(n=>n.y-25)),ymax=Math.max(...active.map(n=>n.y+54));
+ camera.s=Math.min((box.width-50)/Math.max(240,xmax-xmin),(box.height-80)/Math.max(170,ymax-ymin),1.2);camera.x=box.width/2-(xmin+xmax)/2*camera.s;camera.y=box.height/2-(ymin+ymax)/2*camera.s;applyCamera();
+}
+function zoom(factor,cx,cy){const box=$('graph').getBoundingClientRect();cx??=box.width/2;cy??=box.height/2;const s=Math.max(.15,Math.min(2.5,camera.s*factor));camera.x=cx-(cx-camera.x)*s/camera.s;camera.y=cy-(cy-camera.y)*s/camera.s;camera.s=s;applyCamera();}
+function relatedNodes(id){return links.filter(([a,b])=>a===id||b===id).map(([a,b,r])=>({node:byId.get(a===id?b:a),relation:r}));}
+function button(text,action){const b=document.createElement('button');b.type='button';b.textContent=text;b.onclick=action;return b;}
+function renderDetail(){
+ const d=$('detail');d.replaceChildren();const eye=document.createElement('span');eye.className='eyebrow';eye.textContent=selected?groupMap.get(byId.get(selected).group).label:'한 단어부터 시작하세요';d.append(eye);
+ const h=document.createElement('h2');h.textContent=selected?byId.get(selected).label:'오늘의 개념, 한눈에';d.append(h);
+ const p=document.createElement('p');p.className='definition';p.textContent=selected?byId.get(selected).description:'서로 이어진 단어를 따라가며 복습해 보세요. 개념을 누르면 뜻과 관련 개념, 해당 교안이 나옵니다.';d.append(p);
+ const title=document.createElement('h3');title.textContent=selected?'이어지는 개념':'이렇게 시작해 보세요';d.append(title);
+ const container=document.createElement('div');container.className=selected?'related':'start';
+ if(selected)for(const {node,relation} of relatedNodes(selected)){const b=button('',()=>selectNode(node.id,true));const label=document.createElement('span');label.textContent=node.label;const r=document.createElement('span');r.className='relation';r.textContent=relation;b.append(label,r);container.append(b);}
+ else for(const id of ['ia','context','api','qa'])container.append(button(byId.get(id).label,()=>selectNode(id,true)));d.append(container);
+ if(selected){const a=document.createElement('a');a.className='lesson';a.href='slides.html#'+byId.get(selected).slide;a.target='_blank';a.rel='noopener';a.textContent='교안 '+byId.get(selected).slide+'장 · 다시 보기 ↗';d.append(a);d.append(button('전체 연결로 돌아가기',resetSelection));d.lastElementChild.className='reset';}
+}
+function highlight(){
+ const neighbors=new Set(selected?[selected,...relatedNodes(selected).map(x=>x.node.id)]:[]);
+ for(const n of nodes){const e=nodeEls.get(n.id);e.classList.toggle('selected',selected===n.id);e.classList.toggle('dim',!!selected&&!neighbors.has(n.id));e.setAttribute('aria-pressed',String(n.id===selected));}
+ for(const {e,a,b} of edgeEls){e.classList.toggle('active',!!selected&&(a===selected||b===selected));e.classList.toggle('dim',!!selected&&a!==selected&&b!==selected);}
+}
+function selectNode(id,reveal=false){
+ if(!byId.has(id))return;if(reveal&&!visible.has(id)){category='all';query='';$('search').value='';filterNodes();}
+ selected=id;history.replaceState(null,'','#'+id);highlight();renderDetail();renderList();
+ if(innerWidth<=720)$('detail').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});
+}
+function resetSelection(){selected=null;history.replaceState(null,'',location.pathname+location.search);highlight();renderDetail();renderList();}
+function renderFilters(){const f=$('filters');f.replaceChildren();for(const [id,label,color] of [['all','전체',null],...groups]){const b=button(id==='all'?'전체':label,()=>{category=id;resetSelection();filterNodes();fitGraph()});b.className='filter';b.dataset.group=id;b.setAttribute('aria-pressed',String(category===id));if(color){const dot=document.createElement('span');dot.className='dot';dot.style.setProperty('--color',color);b.prepend(dot)}f.append(b);}}
+function renderList(){const list=$('list');list.replaceChildren();for(const n of nodes.filter(n=>visible.has(n.id))){const b=button('',()=>selectNode(n.id));b.dataset.id=n.id;b.setAttribute('aria-pressed',String(selected===n.id));const tag=document.createElement('small');tag.textContent=groupMap.get(n.group).label;const name=document.createElement('strong');name.textContent=n.label;const p=document.createElement('p');p.textContent=n.description;b.append(tag,name,p);list.append(b);}}
+function filterNodes(){
+ const q=query.trim().toLocaleLowerCase();visible=new Set(nodes.filter(n=>(category==='all'||n.group===category)&&(!q||(n.label+' '+n.aliases+' '+n.description).toLocaleLowerCase().includes(q))).map(n=>n.id));
+ for(const [id,e] of nodeEls){const show=visible.has(id);e.classList.toggle('hidden',!show);e.setAttribute('tabindex',show?'0':'-1');e.setAttribute('aria-hidden',String(!show));}
+ for(const {e,a,b} of edgeEls)e.classList.toggle('hidden',!visible.has(a)||!visible.has(b));
+ $('count').textContent=visible.size+' / '+nodes.length+'개 개념';$('empty').hidden=visible.size>0;$('clearSearch').hidden=!query;
+ renderFilters();renderList();const hits=$('searchHits');hits.replaceChildren();hits.hidden=!q||!visible.size;if(q)for(const n of nodes.filter(n=>visible.has(n.id)))hits.append(button(n.label,()=>selectNode(n.id)));
+ if(selected&&!visible.has(selected))resetSelection();highlight();
+}
+function setMode(next){mode=next;$('list').hidden=mode!=='list';$('graph').toggleAttribute('hidden',mode!=='graph');$('graphTools').hidden=mode!=='graph';$('hint').hidden=mode!=='graph';$('graphMode').setAttribute('aria-pressed',String(mode==='graph'));$('listMode').setAttribute('aria-pressed',String(mode==='list'));if(mode==='graph')fitGraph();}
+$('search').addEventListener('input',()=>{query=$('search').value;filterNodes();fitGraph()});$('clearSearch').onclick=()=>{query='';$('search').value='';filterNodes();fitGraph();$('search').focus()};$('graphMode').onclick=()=>setMode('graph');$('listMode').onclick=()=>setMode('list');$('zoomIn').onclick=()=>zoom(1.25);$('zoomOut').onclick=()=>zoom(.8);$('fit').onclick=fitGraph;
+$('graph').addEventListener('wheel',e=>{e.preventDefault();const r=$('graph').getBoundingClientRect();zoom(e.deltaY<0?1.12:1/1.12,e.clientX-r.left,e.clientY-r.top)},{passive:false});
+$('graph').addEventListener('pointerdown',e=>{if(e.button!==0||e.target.closest('.node'))return;gesture={id:e.pointerId,x:e.clientX,y:e.clientY,moved:false};$('graph').setPointerCapture(e.pointerId);$('graph').classList.add('dragging')});
+$('graph').addEventListener('pointermove',e=>{if(!gesture||gesture.id!==e.pointerId)return;const dx=e.clientX-gesture.x,dy=e.clientY-gesture.y;if(Math.abs(dx)+Math.abs(dy)>1)gesture.moved=true;camera.x+=dx;camera.y+=dy;gesture.x=e.clientX;gesture.y=e.clientY;applyCamera()});
+function stopDrag(){if(!gesture)return;$('graph').classList.remove('dragging');const moved=gesture.moved;gesture=null;if(!moved)resetSelection();}
+$('graph').addEventListener('pointerup',stopDrag);$('graph').addEventListener('pointercancel',()=>{gesture=null;$('graph').classList.remove('dragging')});
+let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(fitGraph,100)});
+window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(byId.has(id))selectNode(id,true);else resetSelection()});
+filterNodes();renderDetail();const initial=location.hash.slice(1);if(byId.has(initial))selectNode(initial,true);
+if(innerWidth<=720)$('hint').textContent='작으면 분야를 고르거나 ＋로 확대하세요. 목록으로도 볼 수 있어요.';
+document.fonts.ready.then(fitGraph);
+</script></body></html>
